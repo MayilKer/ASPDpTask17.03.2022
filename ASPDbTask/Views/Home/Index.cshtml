@@ -1,0 +1,15 @@
+﻿@using ASPDbTask.Models;
+@using ASPDbTask.ViewModels;
+@{
+    ViewData["Title"] = "Index";
+}
+@model HomeVM
+
+<h1>Index</h1>
+<ul>
+    @foreach (Product product in Model.Products)
+    {
+        <li>@product.Name @product.Price manat CategoryId: @product.CategoryId @product.Category.Name</li>
+    }
+</ul>
+
